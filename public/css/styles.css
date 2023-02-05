@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  /* background-color: #cbedd5; */
+}
+a {
+  content: "";
+  text-decoration: none;
+  color: inherit;
+}
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  margin-right: 1.2rem;
+}
+.container {
+  max-width: 60rem;
+  background-color: #ffe162;
+  margin: auto;
+}
+.input-form {
+  background-color: #91c483;
+  padding: 1.4rem;
+}
+h1 {
+  text-align: center;
+  padding: 2.4rem 0;
+}
+/* /////////////text container/////////// */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0;
+  font-size: 1.8rem;
+
+  border-bottom: 1px solid #cbedd5;
+}
+#input {
+  border: none;
+  font-size: inherit;
+  padding: 1.2rem 0.6rem;
+  margin: 0.6rem 0;
+  border-radius: 0.6rem;
+}
+/* //////////////////catagory//////////////////// */
+.catagory-date-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #cbedd5;
+}
+.catagory-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#catagory {
+  border: none;
+  padding: 1.2rem 0.6rem;
+  font-size: inherit;
+  font-style: inherit;
+  border-radius: 0.6rem;
+  margin: 1.2rem 0;
+}
+/* ///////////////////date/////////////////////////////// */
+.date-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#date {
+  border: none;
+  padding: 1.2rem 0.6rem;
+  font-size: inherit;
+  font-style: inherit;
+  border-radius: 0.6rem;
+  margin: 1.2rem 0;
+}
+.date {
+  font-weight: 400;
+  color: #212529;
+}
+/* ////////////btn-container///////////// */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem 0;
+  /* background-color: #fcffe7; */
+  border-bottom: 1px solid #cbedd5;
+}
+.btn-green {
+  background-color: #3ccf4e;
+}
+.btn-red {
+  background-color: #dc3535;
+}
+/* ////////////list-containers/////////////// */
+.task {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-bottom: 1px solid #cbedd5;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+}
+.task:nth-child(2n) {
+  background-color: #ffc900;
+}
+.checked {
+  text-decoration: line-through;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+.due-date {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #343a40;
+}
+.tag {
+  margin-left: auto;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+}
+.School {
+  background-color: #2685bf;
+}
+.Personal {
+  background-color: #b375c6;
+}
+.Work {
+  background-color: #9ba17b;
+}
+.Other {
+  display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>TodoList</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>TodoList</h1>
+      <form class="input-form" action="/create-task" method="post">
+        <div class="text-container">
+          <label for="#input">Description</label>
+          <input
+            type="text"
+            id="input"
+            name="task"
+            placeholder="What do you need to do ?"
+          />
+        </div>
+        <div class="catagory-date-container">
+          <div class="catagory-container">
+            <label for="#catagory">Catagory</label>
+            <select name="catagory" id="catagory">
+              <option value="Other" selected hidden>Choose a catagory</option>
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+              <option value="School">School</option>
+              <option value="Other">Others</option>
+            </select>
+          </div>
+          <div class="date-container">
+            <label for="#date">Due date:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              value="<%= new Date().toJSON().slice(0,10) %>"
+              min="2018-01-01"
+              max="2050-12-31"
+            />
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="btn btn-green" type="submit">Add Task</button>
+          <a href="/delete-task" class="btn btn-red">Delete Tasks</a>
+        </div>
+      </form>
+
+      <ul class="list-container">
+        <% for(let i of arr) { let checkValue = (i.check) ? "checked" : ""; %>
+        <li class="task">
+            <form action="/toggle-check/?id=<%=i._id%>" method="post">
+              <input type="checkbox" <%=checkValue%>
+              onChange="this.form.submit()"/>
+            </form>
+          </a>
+          <div class="content <%=checkValue%>">
+            <p><%=i.task %></p>
+            <p class="due_date">
+              <i class="fa-regular fa-calendar"></i>
+              <span class="date"><%= i.date%></span>
+            </p>
+          </div>
+          <span class="tag <%=i.catagory%>"><%=i.catagory%></span>
+        </li>
+        <% } %>
+      </ul>
+    </main>
+    <script src="https://kit.fontawesome.com/21b47651f1.js" crossorigin="anonymous"></script>
+  </body>
+</html>
